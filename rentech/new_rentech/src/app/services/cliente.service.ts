@@ -8,6 +8,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ClienteService {
 
+  datos:any;
+  
   private currentUserSubject: BehaviorSubject<Cliente>;
   public currentUser: Observable<Cliente>;
 
@@ -48,6 +50,23 @@ export class ClienteService {
   }
   listarProductos(productos) {
     return this.http.post(`${this.url}listproductos.php`, JSON.stringify(productos));
+  }
+  modificarCliente(mod) {
+    console.log(mod);
+    console.log("Eskerwe2");
+    return this.http.post(`${this.url}modCliente.php`, JSON.stringify(mod));
+  }
+
+
+ 
+  setDatos(datos) {
+    this.datos = datos;
+  }
+
+  getDatos() {
+    console.log(this.datos);
+
+    return this.datos;
   }
 
   logged() {
