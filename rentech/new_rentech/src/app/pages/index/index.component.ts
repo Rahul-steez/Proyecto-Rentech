@@ -25,6 +25,7 @@ export class IndexComponent implements OnInit {
   submitted = false;
   p:String = null;
   datosUsuario;
+  langs: string[] = [];
 
   currentSection = 'home';
 
@@ -32,9 +33,8 @@ export class IndexComponent implements OnInit {
     private modalService: NgbModal,
     public formBuilder: FormBuilder,
     private router: Router,
-    private ClienteService: ClienteService
+    private ClienteService: ClienteService,
     ) {
-
     }
 
   ngOnInit(): void {

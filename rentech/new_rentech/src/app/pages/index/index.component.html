@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
         <li class="nav-item" [ngClass]="{'active':currentSection === 'home'}">
-          <a [ngxScrollTo]="'#home'" class="nav-link">Inicio</a>
+          <a [ngxScrollTo]="'#home'" class="nav-link">{{'INICIO' | translate}}</a>
         </li>
         <li class="nav-item" [ngClass]="{'active':currentSection === 'features'}">
           <a [ngxScrollTo]="'#features'" class="nav-link">Características</a>

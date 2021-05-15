@@ -24,6 +24,16 @@
               <p class="">
                 <i-feather  name="map-pin"></i-feather>  <span>C/Antoni Guix Ribelles</span>
               </p>
+              <p>
+                <label>
+                  change
+                  <select #langSelect (change)="changeLang(langSelect.value)">
+                    <option *ngFor="let lang of langs" [value]="lang">
+                      {{ lang }}
+                    </option>
+                  </select>
+                </label>
+              </p>
             </div>
           </div>
         </div>
